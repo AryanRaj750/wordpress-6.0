@@ -17,7 +17,7 @@ phases:
       - sudo sed -i 's/localhost/'$DB_HOST'/' wp-config.php
 
 
-  post:
+  build:
     commands:
       - echo Build Completed on `date`
   post_build:
