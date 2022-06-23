@@ -10,6 +10,8 @@ hooks:
 
   ApplicationStop:
     - location: scripts/stopServer.sh
+  BeforeInstall:
+    - location: scripts/serverPermission.sh 
 
   ApplicationStart:
     - location: scripts/startServer.sh
