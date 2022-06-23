@@ -16,8 +16,6 @@ phases:
       - sudo sed -i 's/username_here/'$DB_USER'/' wp-config.php
       - sudo sed -i 's/password_here/'$DB_PASSWD'/' wp-config.php
       - sudo sed -i 's/localhost/'$DB_HOST'/' wp-config.php
-      - cat wp-config.php
-
 
   build:
     commands:
