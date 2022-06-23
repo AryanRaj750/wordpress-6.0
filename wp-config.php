@@ -17,6 +17,10 @@
  *
  * @package WordPress
  */
+define( 'WP_HOME', 'https://aryan.rtd.squareops.co.in' );
+define( 'WP_SITEURL', 'https://aryan.rtd.squareops.co.in' );
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+$_SERVER['HTTPS']='on';
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
