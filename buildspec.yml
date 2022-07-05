@@ -11,6 +11,7 @@ phases:
       - DB_USER=$(aws ssm get-parameters --name /aryan/db_user  --query "Parameters[0]" | jq -r .Value)
       - DB_PASSWD=$(aws ssm get-parameters --name /aryan/db_password --with-decryption --query "Parameters[0]" | jq -r .Value)
       - DB_HOST=$(aws ssm get-parameters --name /aryan/db_host  --query "Parameters[0]" | jq -r .Value)
+      - echo $DB_NAME $DB_USER $DB_PASSWD $DB_HOST
       - sudo sed -i 's/database_name_here/'$DB_NAME'/' wp-config.php
       - sudo sed -i 's/username_here/'$DB_USER'/' wp-config.php
       - sudo sed -i 's/password_here/'$DB_PASSWD'/' wp-config.php
